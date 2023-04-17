@@ -26,6 +26,10 @@ const Navbar = () => {
       route: "projects",
     },
     {
+      name: "Resume",
+      route: "resume",
+    },
+    {
       name: "Contact",
       route: "contact",
     },
@@ -58,7 +62,7 @@ const Navbar = () => {
                   : "text-xl font-medium text-decoration-none whitespace-nowrap text-white"
               }
             >
-              {`<ꪖꪖƙꪖకꫝ కꫝꪖꪹꪑꪖ/>`}
+              {`Ajay Patidar`}
             </a>
           </div>
           <div class="hidden justify-between items-center w-full md:flex md:w-auto ">

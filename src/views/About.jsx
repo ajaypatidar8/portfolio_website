@@ -30,14 +30,7 @@ const About = () => {
                   : "mt-4 text-xl text-justify text-white"
               }
             >
-              I'm a self-taught web developer and Mobile App Developer with
-              experience in designing new features from ideation to production,
-              implementation of wireframes and design flows into high
-              performance software applications. I take into consideration the
-              user experience while writing reusable and efficient code. I
-              passionately combine good design, technology, and innovation in
-              all my projects, which I like to accompany from the first idea to
-              release.Currently, I'm focused on the backend development.
+              I'm a technologist with knowledge of developing and delivering modern-day Apps for both web and mobile platforms. I'm enthusiastic about everything related to technology and design, and that includes stuff like console games, gadgets, computers. I'm proficient in working with technologies like Node.js, Docker, React, Redux, Databases (SQL and NoSQL both).
             </p>
           </motion.div>
           <motion.div

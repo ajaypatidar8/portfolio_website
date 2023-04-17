@@ -19,7 +19,7 @@ const Projects = () => {
           What I Built
         </h4>
         <div className="mt-8 flex justify-between items-stretch flex-wrap">
-          <Card />
+          <Card title="Differchat" description="This is the proj descprition" link="https://glints.com/"/>
           <Card />
           <Card />
           <Card />
