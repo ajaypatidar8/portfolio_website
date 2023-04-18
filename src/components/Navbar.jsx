@@ -22,6 +22,10 @@ const Navbar = () => {
       route: "services",
     },
     {
+      name: "Experience",
+      route: "experience",
+    },
+    {
       name: "Projects",
       route: "projects",
     },
@@ -72,9 +76,10 @@ const Navbar = () => {
               }
             >
               {links.map((el) => (
-                <li className="cursor-pointer">
+                <li className="cursor-pointer" >
                   <Link
                     to={el.route}
+                    // onClick={()=>{console.log("LINK CLICKED")}}
                     activeClass={"text-white bg-blue-500"}
                     spy={true}
                     smooth={true}

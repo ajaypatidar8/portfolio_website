@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import styles from './Card.module.css'
 
 const Card = ({title,description,link}) => {
   return (
@@ -13,11 +14,11 @@ const Card = ({title,description,link}) => {
       class="max-w-xl bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700 my-8"
     >
       <a href={link} target="_blank">
-        <img
+        {/* <img
           class="rounded-t-lg w-full"
           src="https://images.wallpaperscraft.com/image/single/system_scheme_blue_blueprint_10428_300x168.jpg"
           alt=""
-        />
+        /> */}
       {/* </a> */}
       <div class="p-5">
         {/* <a href={link} target="_blank"> */}
@@ -26,7 +27,22 @@ const Card = ({title,description,link}) => {
           </h5>
         {/* </a> */}
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {description}
+          {description.split("-").map((data,index)=>(
+            <div key={index}>
+            {index < description.split('-').length - 1 ? (
+              <div className={styles.dataContainer}>
+                -
+                <div>{data}</div>
+              </div>
+            ) : (
+              <div className={[styles.techStackContainer, styles.dataContainer].join(' ')}>
+                -
+                <div>
+                  {data}
+                </div>
+              </div>)}
+              </div>
+          ))}
         </p>
         <div
           class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300"

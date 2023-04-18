@@ -19,13 +19,36 @@ const Projects = () => {
           What I Built
         </h4>
         <div className="mt-8 flex justify-between items-stretch flex-wrap">
-          <Card title="Differchat" description="This is the proj descprition" link="https://glints.com/"/>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card
+            title="Glints"
+            description="Created online talent recruitment and career discovery platform using ReactJS. 
+            - Developed a web application that behaves differently for various config subdomain, where each subdomain belonged to a different white label company
+            - Tech Stack: ReactJS, MeteorJS, Typescript, Node.js, ES6, ejs, Docker, Rancher, Postgres,ElasticSearch"
+            link="https://glints.com/"
+          />
+          <Card
+            title="Paperpile"
+            description="Created a ReactJS app that performed easy management of references. 
+            - Designed a feature that synced PDFs to Google Drive and cite papers in Google Docs.
+            - Tech Stack: ReactJS, React Native,Typescript, GraphQL"
+            link="https://paperpile.com/"
+          />
+          <Card
+            title="Santiment"
+            description="Created a platform using ReactJS which gives a complete roundup of crypto markets. 
+            - Developed web app, and San UI, a component library which was consumed by the Santiment web application.
+            - Tech Stack: ReactJS, Redux, Haskell, GraphQL, SCSS, RxJS"
+            link="https://santiment.net/"
+          />
+          <Card
+            title="Differchat"
+            description="Created an application using ReactJS that helps students view what they have in common, and connect them to start their conversation. 
+            - Being a web based, mobile first solution, the app made it easier for the students to always stay connected.
+            - Tech Stack: ReactJS, React Native, Typescript, GraphQL,"
+            link="https://differ.chat/"
+          />
         </div>
-        <a
+        {/* <a
           href="hello"
           class=" w-32 flex items-center py-4 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mx-auto mt-4"
         >
@@ -42,7 +65,7 @@ const Projects = () => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </a> */}
       </div>
     </div>
   );

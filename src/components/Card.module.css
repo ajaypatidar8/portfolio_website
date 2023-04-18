@@ -1,0 +1,8 @@
+.dataContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .techStackContainer {
+    padding-top: 10px;
+  }
