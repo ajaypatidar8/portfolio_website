@@ -34,11 +34,13 @@ const Home = () => {
               <span className="block text-blue-500 z-0 lg:inline">
                 <Typical
                   steps={[
-                    "Front End Developer",
-                    1000,
                     "Full Stack Developer",
                     1000,
-                    "Mobile Developer",
+                    "Front End Developer",
+                    1000,
+                    "Back End Developer",
+                    1000,
+                    "Database Developer",
                     1000,
                   ]}
                   loop={Infinity}
@@ -53,7 +55,7 @@ const Home = () => {
               }
             >
               I am a Full-Stack Developer. I am currently working at
-              Dechea as a Full-Stack Developer.
+              Accelerator App as a Full-Stack Developer.
             </p>
             <div className="flex md:justify-center">
               {contactLinks.map((el) => (

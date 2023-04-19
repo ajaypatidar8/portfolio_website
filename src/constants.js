@@ -45,26 +45,43 @@ export const contactLinks = [
 
 export const serviceData = [
   {
-    name: 'Web Application Development',
-    desc: 'Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design user interface design  authoring, including standardised code and proprietary software user experience design and search engine',
+    name: 'Creating Server-Side Logic',
+    desc: 'As a developer, I offer server-side logic development services that involves creating the backbone of a web application or website by utilizing programming languages such as Javascript, Python, Ruby, Node.js, and frameworks like Django, Ruby on Rails, Express.js. I help clients ensure that their web applications are fast, efficient, reliable and the server-side logic is optimized for scalability. By providing this service to clients, I help them to build stable, high-performing web applications that can effectively handle user requests and provide a seamless experience to their customers.',
     img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
   },
   {
-    name: 'Mobile Application Development',
-    desc: `We provide a range of mobile application development services
-    including custom mobile development on Android platforms, building
-    cross-platform apps, designing user experience and integrating
-    novel mobile interfaces such as chat and voice`,
-    img: "https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-app-development-responsive-web-design-justicon-lineal-color-justicon.png"
+    name: 'Building Databases',
+    desc: `I help the client in creating and managing the database structure, designing efficient data models, and ensuring data integrity and security. I work closely with clients to understand their specific requirements, and I use my expertise in database technologies to design and implement customized database solutions that are scalable and reliable. Throughout the development process, I prioritize optimizing the database performance to ensure fast and efficient data retrieval and storage. By providing this service, I help clients organize and manage their data effectively, which is essential for their business operations and growth.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
   },
-
   {
-    name: 'Backend Development',
-    desc: `Graphic design is a craft where professionals create visual
-    content to communicate messages. By applying visual hierarchy and
-    page layout techniques, designers use typography and pictures to
-    meet users' specific needs and focus on the logic of displaying
-    elements in interactive designs, to optimize the user experience.`,
+    name: 'Developing APIs',
+    desc: `As a developer, I offer API development services to clients that involve creating robust, scalable, and secure APIs that can handle large amounts of data and user requests. I prioritize creating APIs that are easy to use, well-documented, and integrate seamlessly with other software systems. I use the latest technologies and industry best practices to ensure that the APIs meet the highest quality standards and deliver an exceptional user experience. By providing API development services, I help clients streamline their software systems, automate their workflows, and improve their overall productivity and efficiency.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+  },
+  {
+    name: 'Implementing Security Measures',
+    desc: `I provide security services to clients by implementing robust security measures to ensure the safety and protection of their applications and data. My security measures include implementing encryption, access control, and authentication mechanisms to prevent unauthorized access and data breaches. I also perform regular security audits and vulnerability assessments to identify and fix any potential security threats. By providing security services to clients, I ensure that their applications are secure, reliable, and protect their sensitive data, giving them peace of mind and confidence in their software.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+  },
+  {
+    name: 'Deploying the Application',
+    desc: `I take care of deploying the application for clients, making sure that the process is seamless and efficient. It involves taking the code from the development environment and launching it on a production server, ensuring that the application is available for use by end-users. This also includes selecting the appropriate hosting provider, configuring the server environment, and setting up the necessary infrastructure. I also ensure that the deployment process is secure and reliable, with proper backup and recovery procedures in place. By providing reliable deployment services, I help clients ensure that their applications are available to users 24/7, providing a seamless and uninterrupted user experience.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+  },
+  {
+    name: 'Working on Scalability',
+    desc: `As a developer, I prioritize working on scalability to ensure that the application can handle an increasing number of users and traffic over time. This involves optimizing the application's architecture and code, using efficient algorithms and data structures, and leveraging cloud-based services to handle the workload. I continuously monitor the performance of the application and make necessary adjustments to ensure that it can handle any increase in traffic or usage. By providing scalability services, I help clients to future-proof their web applications and prepare them for growth and success.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+  },
+  {
+    name: 'Debugging and testing',
+    desc: `I prioritize providing top-notch debugging and testing services to my clients. I implement various testing techniques like unit testing, integration testing, and acceptance testing to identify and fix any errors or defects that might exist in the application. Furthermore, I continuously test and refine the application throughout the development process to ensure that it meets the highest quality standards. I help clients deliver software applications and websites that are reliable, secure, and provide a seamless user experience.`,
+    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+  },
+  {
+    name: 'System infrastructure, web architecture, and communication protocols',
+    desc: `As a web developer, I provide system infrastructure, web architecture, and communication protocols services to clients to ensure that their web applications are built on a solid and efficient foundation. I prioritize designing and implementing the infrastructure that supports their application, including servers, databases, and network architecture. I also ensure that the communication protocols between different components of the application are secure and efficient. I continuously test and refine the web architecture and protocols to ensure that the application meets the highest quality standards and delivers an exceptional user experience. I help clients to achieve reliable, scalable, and secure web applications that can meet their business needs. `,
     img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
   },
 
