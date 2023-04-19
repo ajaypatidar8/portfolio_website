@@ -8,6 +8,7 @@ import Projects from "./views/Projects";
 import LoadingScreen from "./components/LoadingScreen";
 import { ThemeProvider } from "./themeProvider";
 import Resume from "./views/Resume";
+import Experience from "./views/Experience";
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -25,6 +26,7 @@ function App() {
             <Home />
             <About />
             <Services />
+            <Experience />
             <Projects />
             <Resume />
             <Contact />
