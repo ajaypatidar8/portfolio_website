@@ -29,7 +29,8 @@ const Card = ({title,description,link}) => {
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {description.split("-").map((data,index)=>(
             <div key={index}>
-            {index < description.split('-').length - 1 ? (
+              - {data}
+            {/* {index < description.split('-').length - 1 ? (
               <div className={styles.dataContainer}>
                 -
                 <div>{data}</div>
@@ -40,7 +41,7 @@ const Card = ({title,description,link}) => {
                 <div>
                   {data}
                 </div>
-              </div>)}
+              </div>)} */}
               </div>
           ))}
         </p>
