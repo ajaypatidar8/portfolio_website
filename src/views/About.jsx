@@ -6,6 +6,14 @@ import { motion } from "framer-motion";
 const About = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  const aboutData = [
+    " ✔️ I am a skilled technologist with more than a decade of  experience building modern-day apps for both web and mobile  platforms. My expertise in Node.js, Docker, React, Redux, Graphql, and SQL and NoSQL databases has allowed me to create dynamic and innovative applications that have exceeded my clients expectations.",
+    "✔️ What sets me apart from other technologists is my passion for technology and design. As a console gamer, gadget enthusiast, and  computer hobbyist, I have a unique perspective on emerging trends and advancements. I stay up-to-date with the latest technologies and design trends, enabling me to bring fresh ideas and insights to every project.",
+    " ✔️ One of my core strengths is my experience with Firebase for architecting real-time web and mobile applications. I am also skilled in DevOps and have worked with a variety of cloud platforms such as GCP, AWS, and Digital Ocean. This ensures that I can manage projects efficiently, effectively, and within budget.",
+    "✔️ As a lifelong learner, I am constantly seeking new opportunities to expand my knowledge and skills. I keep up with the latest trends and developments in my field and look for ways to integrate them into my work. I am passionate about growing as a technologist, and I am committed to providing innovative solutions that exceed expectations.",
+    " ✔️ In summary, I am a passionate and dedicated technologist with a   proven track record of delivering high-quality results. My expertise in various technologies, passion for technology and  design, and commitment to lifelong learning make me an asset to any project. I am excited about the opportunity to bring my skills and expertise to your team and exceed your expectations.",
+  ];
+
   return (
     <div id="about" className={darkMode === true ? "bg-white" : "bg-gray-900"}>
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 md:mt-0 pt-24 pb-12">
@@ -23,18 +31,20 @@ const About = () => {
             <h4 className="mt-12 text-3xl font-semibold text-blue-500">
               A bit about me
             </h4>
-            <p
-              className={
-                darkMode
-                  ? "mt-4 text-xl text-justify text-gray-500"
-                  : "mt-4 text-xl text-justify text-white"
-              }
-            >
-              I'm a technologist with knowledge of developing and delivering modern-day Apps for both web and mobile platforms. I'm enthusiastic about everything related to technology and design, and that includes stuff like console games, gadgets, computers. I'm proficient in working with technologies like Node.js, Docker, React, Redux, Databases (SQL and NoSQL both).
-            </p>
+            {aboutData.map((data, index) => (
+              <p
+                key={index}
+                className={
+                  darkMode
+                    ? "mt-4 text-xl text-justify text-gray-500"
+                    : "mt-4 text-xl text-justify text-white"
+                }
+              >
+                {data}
+              </p>
+            ))}
           </motion.div>
-          <motion.div
-          >
+          <motion.div>
             <h4 className="mt-12 text-3xl font-semibold text-blue-500">
               Technologies and Tools
             </h4>

@@ -37,8 +37,8 @@ export const techStack = [
 
 
 export const contactLinks = [
-{ name: 'Github', url: 'https://img.icons8.com/doodle/40/000000/github--v1.png', link :'https://github.com/aakashsh1999'},
-{ name: 'LinkedIn', url: 'https://img.icons8.com/doodle/40/000000/linkedin--v2.png', link: 'https://www.linkedin.com/in/aakashsh1999/'}
+{ name: 'Github', url: 'https://img.icons8.com/doodle/40/000000/github--v1.png', link :'https://github.com/ajaypatidar7722'},
+{ name: 'LinkedIn', url: 'https://img.icons8.com/doodle/40/000000/linkedin--v2.png', link: 'https://www.linkedin.com/in/ajay-patidar-6b123778/'}
 ]
 
 
@@ -52,7 +52,7 @@ export const serviceData = [
   {
     name: 'Building Databases',
     desc: `I help the client in creating and managing the database structure, designing efficient data models, and ensuring data integrity and security. I work closely with clients to understand their specific requirements, and I use my expertise in database technologies to design and implement customized database solutions that are scalable and reliable. Throughout the development process, I prioritize optimizing the database performance to ensure fast and efficient data retrieval and storage. By providing this service, I help clients organize and manage their data effectively, which is essential for their business operations and growth.`,
-    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+    img: "https://img.icons8.com/000000/database"
   },
   {
     name: 'Developing APIs',
@@ -62,12 +62,12 @@ export const serviceData = [
   {
     name: 'Implementing Security Measures',
     desc: `I provide security services to clients by implementing robust security measures to ensure the safety and protection of their applications and data. My security measures include implementing encryption, access control, and authentication mechanisms to prevent unauthorized access and data breaches. I also perform regular security audits and vulnerability assessments to identify and fix any potential security threats. By providing security services to clients, I ensure that their applications are secure, reliable, and protect their sensitive data, giving them peace of mind and confidence in their software.`,
-    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+    img: "https://img.icons8.com/cyber-security"
   },
   {
     name: 'Deploying the Application',
     desc: `I take care of deploying the application for clients, making sure that the process is seamless and efficient. It involves taking the code from the development environment and launching it on a production server, ensuring that the application is available for use by end-users. This also includes selecting the appropriate hosting provider, configuring the server environment, and setting up the necessary infrastructure. I also ensure that the deployment process is secure and reliable, with proper backup and recovery procedures in place. By providing reliable deployment services, I help clients ensure that their applications are available to users 24/7, providing a seamless and uninterrupted user experience.`,
-    img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
+    img: "src/assets/database.png"
   },
   {
     name: 'Working on Scalability',

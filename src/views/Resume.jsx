@@ -36,14 +36,9 @@ const Resume = () => {
         >
           Resume
         </h2>
-        <button
-          href="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf"
-          // download=""
-
-          // target="_self"
-        >
-          Download CVq
-        </button>
+        <a href="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf" download="">
+            2.Download CV
+        </a>
         <Document
           file="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
