@@ -4,7 +4,6 @@ import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
 import { Document, Page, pdfjs } from "react-pdf";
 import { windowHandler } from "../utils/windowWidth";
-import styles from "./Resume.module.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -27,6 +26,7 @@ const Resume = () => {
   return (
     <div id="resume" className={darkMode === true ? "bg-white" : "bg-gray-900"}>
       <div className="max-w-7xl mx-auto x-4 sm:px-6 lg:px-8 px-4 md:mt-0 pt-24 pb-12">
+        <div className="flex justify-center	gap-[15px]">
         <h2
           className={
             darkMode
@@ -36,15 +36,17 @@ const Resume = () => {
         >
           Resume
         </h2>
-        <a href="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf" download="">
-            2.Download CV
+        <a href="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf" download="" 
+        className="flex text-white text-center items-center bg-blue-500 rounded-md ">
+            <div  className="pr-[12px] pl-[12px] ">Download CV</div>
         </a>
+        </div>
         <Document
           file="https://raw.githubusercontent.com/ajaypatidar8/portfolio_website/master/src/assets/Ajay_resume.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
         >
           {Array.from({ length: numPages }, (_, index) => (
-            <div className={styles.pageContainer}>
+            <div className="flex pt-[20px] justify-center">
               <Page
                 key={`page_${index + 1}`}
                 pageNumber={index + 1}
