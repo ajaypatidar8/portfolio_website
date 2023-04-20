@@ -1,10 +1,77 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
+import qs from "qs";
 
 const Contact = () => {
   const theme = useContext(ThemeContext);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const darkMode = theme.state.darkMode;
+  const [statusError, setStatusError] = useState("");
+  const [sending, setSending] = useState(false);
+  const [complete, setComplete] = useState(false);
+
+  // const submitHandler=()=>{
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setStatusError("");
+
+    if (sending) return;
+
+    try {
+      setSending(true);
+      const res = await fetch(
+        "/1",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            // "Access-control-allow-origin": "*",
+            "Access-Control-Allow-Origin": "*",
+            // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+            // "Access-Control-Allow-Headers": "Content-Type",
+          },
+        }
+      ) 
+      .then (response => console.log("REST",response))
+      // .then((response)=>console.log("data",response));
+
+      // const res = await fetch('/api/sendgrid')
+      // , {
+      //   body: qs.stringify({
+      //     email: email,
+      //     fullname: email,
+      //     message: message,
+      //   }),
+      //   mode: "no-cors",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "access-control-allow-origin": "*",
+      //   },
+      //   method: "POST",
+      // });
+      // const { data } = await res.json();
+      console.log("RES", res);
+      const { error } = await res.json();
+
+      const statusError = getStatusError({
+        status: res?.status,
+        errorMessage: error,
+        fallback: "There was a problem sending your message",
+      });
+
+      if (statusError) throw new Error(statusError);
+
+      setComplete(true);
+      setSending(false);
+    } catch (error) {
+      // console.log("ERR");
+      setSending(false);
+      setStatusError(error.message || error);
+    }
+  };
+  // }
   return (
     <div
       id="contact"
@@ -30,8 +97,8 @@ const Contact = () => {
         </div>
         <div className="flex justify-between items-center md:items-stretch  flex-col md:flex-row pb-24">
           <div className="w-full md:pr-8">
-            <form>
-              <div class="my-6">
+            <form onSubmit={onSubmit}>
+              {/* <div class="my-6">
                 <label
                   for="name"
                   class={
@@ -43,13 +110,13 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="name"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your name"
                   required
                 />
-              </div>
+              </div> */}
               <div className="mb-4">
                 <label
                   for="email"
@@ -67,6 +134,8 @@ const Contact = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -85,20 +154,26 @@ const Contact = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your message"
                   required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
               <div className="flex justify-between ">
-                <div className="underline">
-                  <a href="mailto:aakash.sh858791@gmail.com">
+                {/* <div className="underline">
+                  <a href="mailto:atharva@techstuff.cloud"> 
                     Send me email directly
                   </a>
-                </div>
-                <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400">
-                  <a href="mailto:aakash.sh858791@gmail.com">Submit</a>
-                </button>
+                </div> */}
+                {/* <button className="bg-indigo-500 text-white px-4 py-2 w-40 rounded-md hover:bg-indigo-400"> */}
+                {/* <a href="mailto:atharva@techstuff.cloud">Submit</a> */}
+                <button>Submit</button>
+                {/* </button> */}
               </div>
             </form>
           </div>
+          ERR:_ {statusError}
+          SENDING:_ {sending}
+          COMPLETE:-{complete}
           <div className="w-full flex flex-col md:items-end  mt-12 md:mt-6">
             {/* <h1 className="text-3xl font-bold">Phone</h1>
             <a
@@ -152,5 +227,22 @@ const Contact = () => {
     </div>
   );
 };
+function getStatusError({
+  status,
+  errorMessage,
+  fallback = "There was a problem with your request",
+}) {
+  if (status === 200) return false;
 
+  const statuses = {
+    500: "There was a problem with the server, try again later",
+    404: "There was a problem connecting to the server. Make sure you are connected to the internet",
+  };
+
+  if (errorMessage) {
+    return errorMessage;
+  }
+
+  return statuses[status] || fallback;
+}
 export default Contact;
