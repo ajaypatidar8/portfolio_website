@@ -3,7 +3,6 @@ import { techStack } from "../constants";
 import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
 import Card from "../components/Card";
-import styles from "./Resume.module.css";
 
 
 const Experience = () => {
