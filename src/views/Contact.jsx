@@ -36,8 +36,7 @@ const Contact = () => {
       // .then (response => console.log("REST",response))
       // .then((response)=>console.log("data",response));
 
-      const res = await fetch('/api/sendgrid'
-      , {
+      const res = await fetch(process.env.SENDGRID_URL, {
         body: qs.stringify({
           email: email,
           fullname: email,
