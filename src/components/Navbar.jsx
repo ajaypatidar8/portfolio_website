@@ -52,8 +52,8 @@ const Navbar = () => {
       <nav
         className={
           darkMode
-            ? "bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
-            : "bg-gray-700 border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
+            ? "bg-white border-gray-200 z-50 shadow-lg  md:px-8 px-1 fixed w-full top-0 xl:px-8 slg:px-1"
+            : "bg-gray-700 border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0 xl:px-8 slg:px-1"
         }
       >
         <div className="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
@@ -69,7 +69,7 @@ const Navbar = () => {
               {`Ajay Patidar`}
             </a>
           </div>
-          <div class="hidden justify-between items-center w-full md:flex md:w-auto ">
+          <div class="hidden justify-between items-center w-full smd:flex smd:w-auto ">
             <ul
               class={
                 "flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium"
@@ -111,7 +111,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex md:hidden items-center">
+          <div className="flex smd:hidden items-center">
             <div onClick={() => toggleTheme()}>
               {darkMode ? (
                 <img
@@ -148,11 +148,11 @@ const Navbar = () => {
             exit={{ x: 200, transition: { type: "spring" } }}
             className={
               darkMode
-                ? "bg-white py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-                : "bg-black py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
+                ? "bg-white py-2 px-2 smd:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
+                : "bg-black py-2 px-2 smd:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
             }
           >
-            <ul class="md:hidden md:flex-row md:space-y-8 md:mt-0 md:text-md md:font-medium">
+            <ul class="smd:hidden smd:flex-row smd:space-y-8 smd:mt-0 smd:text-md smd:font-medium">
               {links.map((el) => (
                 <Link
                   to={el.route}

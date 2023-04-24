@@ -14,7 +14,7 @@ const Resume = () => {
   const [windowWidth, setWindowWidth] = useState(1.12);
 
   useEffect(() => {
-    const width = window.innerWidth;
+    const width = window.screen.width;
     const pdfWidth = windowHandler(width);
     setWindowWidth(pdfWidth);
   }, []);
