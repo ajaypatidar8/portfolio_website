@@ -6,7 +6,7 @@ import qs from "qs";
 const Contact = () => {
   const theme = useContext(ThemeContext);
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [userMessage, setUserMessage] = useState("");
   const darkMode = theme.state.darkMode;
   const [statusError, setStatusError] = useState("");
   const [sending, setSending] = useState(false);
@@ -20,38 +20,21 @@ const Contact = () => {
 
     try {
       setSending(true);
-      // const res = await fetch(
-      //   "/1",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       // "Access-control-allow-origin": "*",
-      //       "Access-Control-Allow-Origin": "*",
-      //       // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-      //       // "Access-Control-Allow-Headers": "Content-Type",
-      //     },
-      //   }
-      // ) 
-      // .then (response => console.log("REST",response))
-      // .then((response)=>console.log("data",response));
 
-      const res = await fetch(process.env.SENDGRID_URL, {
+
+      const res = await fetch('https://us-central1-my-sandbox-250210.cloudfunctions.net/sendEmail', {
         body: qs.stringify({
           email: email,
           fullname: email,
-          message: message,
+          message: userMessage,
         }),
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+       
         method: "POST",
-      });
-      // console.log("RES", res);
-      const { error } = await res.json();
+      })
+     
+      const { message, error } = await res.json();
 
+      console.log("RES", message);
       const statusError = getStatusError({
         status: res?.status,
         errorMessage: error,
@@ -135,7 +118,7 @@ const Contact = () => {
               </div>
               <div className="mb-4">
                 <label
-                  for="message"
+                  for="userMessage"
                   class={
                     darkMode
                       ? "block mb-2 text-lg font-medium text-gray-900"
@@ -149,8 +132,8 @@ const Contact = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your message"
                   required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={userMessage}
+                  onChange={(e) => setUserMessage(e.target.value)}
                 />
               </div>
               <div className="flex justify-between ">
@@ -158,6 +141,7 @@ const Contact = () => {
               </div>
             </form>}
            {statusError && <div className="text-red-500"> Error:- {statusError}</div>}
+           {complete && <div className="text-green-500"> Message Sent</div>}
           </div>
           <div className="w-full flex flex-col md:items-end  mt-12 md:mt-6">
             <h1 className="text-3xl font-bold">Email</h1>
